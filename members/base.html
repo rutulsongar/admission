@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> {% block title %}{% endblock title %}LJ UNI</title>
+  <style>
+    *{
+      margin: 0%;
+      padding: 0%;
+    }
+    .footer {
+  background-color: black;
+  color: #fefefe;
+}
+
+.footer .heading {
+  color: #fefefe;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.footer .content {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem;
+}
+
+.footer .content p {
+  margin-bottom: 1.3rem;
+}
+
+.footer .content a {
+  text-decoration: none;
+  color: #fefefe;
+}
+
+.footer .content a:hover {
+  border-bottom: 1px solid #971717;
+}
+
+.footer .content h4 {
+  margin-bottom: 1.3rem;
+  font-size: 19px;
+}
+
+footer {
+  text-align: center;
+}
+
+footer hr {
+  margin: 2rem 0;
+}
+
+@media (max-width: 767px) {
+  .footer .content {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  .footer {
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer .content,
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .footer {
+    position: unset;
+  }
+}
+
+button {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ background: transparent;
+ padding: 0;
+ font-size: inherit;
+ font-family: inherit;
+}
+
+button.learn-more {
+ width: 12rem;
+ height: auto;
+}
+
+button.learn-more .circle {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: relative;
+ display: block;
+ margin: 0;
+ width: 3rem;
+ height: 3rem;
+ background: #282936;
+ border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ left: 0.625rem;
+ width: 1.125rem;
+ height: 0.125rem;
+ background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+ position: absolute;
+ content: "";
+ top: -0.29rem;
+ right: 0.0625rem;
+ width: 0.625rem;
+ height: 0.625rem;
+ border-top: 0.125rem solid #fff;
+ border-right: 0.125rem solid #fff;
+ transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding: 0.75rem 0;
+ margin: 0 0 0 1.85rem;
+ color: #282936;
+ font-weight: 700;
+ line-height: 1.6;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+button:hover .circle {
+ width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+ background: #fff;
+ transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+ color: #fff;
+}
+
+.op{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.po{
+  border: none;
+}
+/* CSS for Hero Section */
+.hero {
+  background-image: url('path/to/hero-image.jpg');
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  padding: 100px 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* CSS for Information Section */
+.info {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.info-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info h2 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.info p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.colorop{
+  color: #282936;
+}
+
+  </style>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+   <title>  UNIVERSITY</title>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+
+    <!-- Example Code -->
+
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index"> UNIVERSITY</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="/index">Home</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link " href="/Admission">Admission Form</a>
+            </li> -->
+            
+            {% if user.is_authenticated %}
+              {% if user.is_superuser == 1 %}
+              <li class="nav-item">
+                <a class="nav-link" href="/view_details">Form Details</a>
+              </li>
+              {% endif %}
+            {% endif %}
+            <div class="d-flex flex-row-reverse">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Academics
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/mca">MCA</a></li>
+                  <li><a class="dropdown-item" href="/bca">BCA</a></li>
+                  <li><a class="dropdown-item" href="/mba">MBA</a></li>
+                </ul>
+              </li>
+            </div>
+            <li class="nav-item">
+              {% if user.is_authenticated %}
+              <a class="nav-link" href="/signout"> SignOut </a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="/signin">SignIn </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/signup"> SignUp </a>
+            </li>
+            {% endif %}
+            </li>
+          </ul>
+        </div>
+      </div>
+     
+    </nav>
+
+    {% block body %} {% endblock body %}
+
+    <div class="footer">
+      <div class="heading">
+        <h2>YASH UNIVERSITY</h2>
+      </div>
+      <div class="content">
+        <div class="services">
+          <h4>Services</h4>
+          <p><a href="#">App development</a></p>
+          <p><a href="#">Web development</a></p>
+          <p><a href="#">DevOps</a></p>
+          <p><a href="#">Web designing</a></p>
+        </div>
+        <div class="social-media">
+          <h4>Social</h4>
+          <p>
+            <a href="#"
+              ><i class="fab fa-linkedin"></i> Linkedin</a
+            >
+          </p>
+          <p>
+            <a href="#"
+              ><i class="fab fa-twitter"></i> Twitter</a
+            >
+          </p>
+          <p>
+            <a href="https://github.com/farazc60"
+              ><i class="fab fa-github"></i> Github</a
+            >
+          </p>
+          <p>
+            <a href="https://www.facebook.com/codewithfaraz"
+              ><i class="fab fa-facebook"></i> Facebook</a
+            >
+          </p>
+          <p>
+            <ion-icon name="logo-instagram"></ion-icon> Instagram
+          </p>
+        </div>
+        <div class="details">
+          <h4 class="address">Address</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur <br />
+            adipisicing elit. Cupiditate, qui!
+          </p>
+          <h4 class="mobile">Mobile</h4>
+          <p><a href="#">+91-9515445450</a></p>
+          <h4 class="mail">Email</h4>
+          <p><a href="#">rutulsonger9812@gmail.com</a></p>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        © .
+      </footer>
+    <!-- End Example Code -->
+</body>
+
+</html>

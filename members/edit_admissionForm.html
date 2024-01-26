@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ADMISSION{% endblock title %}
+{% block body %}
+
+<title>Admission Form</title>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 50%;
+    position: relative;
+    margin: auto;
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: 6px;
+  }
+</style>
+</head>
+
+<body>
+    <div class="container-fluid px-0">
+      <div class="col-xs-12 col-sm-offset-1 col-sm-4 step aos-init aos-animate" data-aos="fade-right"></div>
+      <div class="steps-container">
+        <div class="step-new-heading aos-init aos-animate" data-aos="fade-right">
+          <h3><b>Steps to follow :-</b></h3>
+        </div>
+        <div class="step-img text-center aos-init aos-animate" data-aos="fade-right">
+          <img alt="step" src="https://cdn.npfs.co/uploads/template/639/2364/publish/images/step/desktop-view.png"
+            style="max-width:100%">
+        </div>
+        <h1 class="text align-items-center">EDIT ADMISSION FORM :-</h1>
+      </div>
+      <form action="/updatedata/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for item in AdmissionList %}
+        <input type="hidden" value="{{ item.id }}" id="id" name="id">
+        <table width="550" height="100" border="1" cellspacing="0px">
+          <th>Form details:</th>
+          <tr align="center">
+            <td>Name :</td>
+            <td><input type="text" value="{{ item.name }}" name="change_name" required></td>
+          </tr>
+          <tr align="center">
+            <td>Gender :</td>
+            <td>
+              <input type="radio" name="Gender" value="male"> Male
+              <input type="radio" name="Gender" value="female"> Female
+            </td>
+          </tr>
+          <tr align="center">
+            <td>Date of Birth</td>
+            <td><input type="date" name="DOB" required></td>
+          </tr>
+          <tr align="center">
+            <td>Blood group :</td>
+            <td><input type="text" name="blood_grp" value="{{item.blood}}" required></td>
+          </tr>
+          <tr align="center">
+            <td>Aadhar Card no. :</td>
+            <td><input type="text" value="{{ item.Addhar_no }}" name="change_addhar_card" required></td>
+          </tr>
+          <tr align="center">
+            <td>Phone no :</td>
+            <td>
+              <input type="phone" value="{{ item.phone_no }}" name="change_phone_no" required>
+            </td>
+          </tr>
+          <tr align="center">
+            <td>Email:</td>
+            <td><input type="email" value="{{ item.email }}" name="change_email" required></td>
+          </tr>
+          <tr align="center">
+            <td>Religion :</td>
+            <td><input type="text" value="{{ item.religion }}" name="change_religion" required></td>
+          </tr>        
+          <tr align="center">
+            <td>Address :</td>
+            <td><input type="text" value="{{ item.Address }}" name="change_address" required></td>
+          </tr>
+          <tr align="center">
+            <td>Entry Level :</td>
+            <td> <select name="entry_level" required>
+              <option value="{{item.entry}}">{{item.entry}}</option>
+              <option value="After Graduation">After Graduation</option>
+              <option value="After 10th">After 10th</option>
+              <option value="After 12th">After 12th</option>
+            </select></td>
+          </tr>
+          <tr align="center">
+            <td>Course Preference :</td>
+            <td>  <select name="Course_Preference "  required>
+              <option value="{{item.cource}}" selected="selected">{{item.cource}}</option>
+              <option value="Applied Sciences">Applied Sciences</option>
+              <option value="Architecture">Architecture</option>
+              <option value="Business Management">Business Management</option>
+              <option value="Commerce">Commerce</option>
+              <option value="Computer Applications">Computer Applications</option>
+              <option value="Design">Design</option>
+              <option value="Diploma Engineering">Diploma Engineering</option>
+              <option value="Doctoral Program">Doctoral Program</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Event Management">Event Management</option>
+              <option value="Law">Law</option>
+              <option value="Media Communication">Media Communication</option>
+              <option value="Pharmacy">Pharmacy</option>
+              <option value="Physiotherapy">Physiotherapy</option>
+              <option value="Sports Management">Sports Management</option>
+            </select></td>
+          </tr>
+          <tr align="center">
+            <td><input type="submit" value="submit"></td>
+          </tr>
+          
+        </table>
+        {% endfor %}
+      </form>
+      {% endblock body %}

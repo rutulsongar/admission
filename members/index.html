@@ -1,0 +1,200 @@
+  {% extends 'base.html' %}
+  {% load static %}
+  {% block title %}Home{%  endblock title %}
+  {% block  body %}
+
+  <!-- {% for message in messages %}
+  <div class="Error_msg">
+        <div class="alert-alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                <i class="fa-solid fa-triangle-exclamation"></i>{{ message }}
+        </div>
+  </div>
+  {% endfor %} -->
+
+  <!-- {% if user.is_authenticated %}
+    Welcome, {{user.first_name}}
+  {% endif %} -->
+  
+<div class="con">
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'c1.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'c2.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'c3.jpg' %}" alt="..."  style="width:100% ; height:30%;">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+
+
+<div class="container">
+  <section style="padding:0;">
+		<div class="container">
+<div class="row marqueeBox">
+			<marquee class="col-xs-8 col-sm-10 col-lg-11" direction="left" behavior="scroll" scrollamount="7" onmouseover="this.stop();" onmouseout="this.start();">
+            	<ul>
+      <li>• <a>International Conference on Future of Pharmaceutical Drug Development </a></li>
+      <li>• <a>Design Entrance Exam </a></li>
+      <li>• <a>International Conference 2023 </a></li>
+    	</ul>
+      </marquee>
+    	<a  class="col-xs-4 col-sm-2 col-lg-1 marquee_more"> </a>
+        </div>
+
+
+</div>
+		</section>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'c4.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+              <p class="card-text">DEGREE</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="learn-more">
+                  <span class="circle" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                  </span>
+                  <a href="/degree" class="button-text">View More</a>
+                </button>
+                <small class="text-body-secondary"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'c5.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+              <p class="card-text">SOFTWARE FACTORY</p>
+              <button class="learn-more">
+                <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+                </span>
+                <a href="/sf" class="button-text">View more</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'c6.jpg' %}" class="d-block w-100" alt="...">
+              <div class="card-body">
+              <p class="card-text">KALANJALI YOUTH FESTIVAL</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="learn-more">
+                  <span class="circle" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                  </span>
+                  <span class="button-text">View more</span>
+                </button>
+                <small class="text-body-secondary"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'c7.jpg' %}" class="d-block w-100" alt="...">
+            <div class="card-body">
+              <p class="card-text">LEGAL AWARENESS PROGRAMME</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="learn-more">
+                  <span class="circle" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                  </span>
+                  <span class="button-text">View more</span>
+                </button>
+                <small class="text-body-secondary"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'c9.jpg' %}" class="d-block w-100" alt="...">
+            <div class="card-body">
+              <p class="card-text">ONLINE EXAM CENTER</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="learn-more">
+                  <span class="circle" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                  </span>
+                  <span class="button-text">View more</span>
+                </button>
+                <small class="text-body-secondary"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'c8.jpg' %}" class="d-block w-100" alt="...">
+          <div class="card-body">
+              <p class="card-text">INTERNATIONAL CONFERENCE ON RECENT ADVANTAGES IN ENGINEERING AND COMPUTER APPLICATIONS
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="learn-more">
+                  <span class="circle" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                  </span>
+                  <span class="button-text">View more</span>
+                </button>
+                <small class="text-body-secondary"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fixed_social_icons">
+      <div class="Social_share toggleQuickLink">
+        <a href="javascript:void(0);">
+          <i class="fa fa-angle-left"></i>
+        </a>
+        <ul class="list-unstyled">
+          <li class="facebook">
+            <a target="_blank" href="https://www.facebook.com/lokjagrutiuniversity">
+              <i class="fa fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="twitter">
+            <a target="_blank" href="https://twitter.com/lj_university">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="instagram">
+            <a target="_blank" href="https://www.instagram.com/lj_university/">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+          <li class="linkedin">
+            <a target="_blank" href="https://www.linkedin.com/school/ljuniversityofficial/">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="youtube">
+            <a target="_blank" href="https://www.youtube.com/channel/UC6cUvf8NQf36hIMGj6J1DTg/featured">
+              <i class="fa fa-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+{% endblock body %}
